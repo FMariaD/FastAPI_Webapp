@@ -1,6 +1,7 @@
 from db.init_db import init_db
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from routers.auth import router as auth_router
 from routers.books import router as book_router
 from routers.users import router as user_router
 
@@ -35,3 +36,4 @@ async def read_root() -> dict:
 
 app.include_router(book_router)
 app.include_router(user_router)
+app.include_router(auth_router)

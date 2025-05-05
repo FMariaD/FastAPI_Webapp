@@ -1,11 +1,11 @@
 from datetime import datetime, timedelta, timezone
 from typing import Annotated
 
-import jwt
 from config import settings
 from db.session import get_db
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
+from jose import jwt
 from models.db_models import User
 from passlib.context import CryptContext
 from sqlalchemy.orm import Session

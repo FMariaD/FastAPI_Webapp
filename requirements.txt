@@ -2,7 +2,9 @@ fastapi
 uvicorn
 pydantic
 pydantic-settings
+pydantic[email]
 sqlalchemy
 passlib
 psycopg2-binary
-jwt
+python-jose[cryptography]
+python-multipart

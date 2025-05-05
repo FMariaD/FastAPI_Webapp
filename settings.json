@@ -1,0 +1,26 @@
+{
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    // Default (format when you paste)
+    "editor.formatOnPaste": true,
+    // Default (format when you save)
+    "editor.formatOnSave": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.tabWidth": 4,
+    "ruff.configuration": "",
+    // Форматирование, исправление мелких ошибок и сортировка импортов при сохранении для Python и Jupyter Notebook
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "notebook.source.fixAll": "explicit",
+        "notebook.source.organizeImports": "explicit"
+    }
+}

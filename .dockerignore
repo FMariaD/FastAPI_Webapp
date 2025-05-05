@@ -1,0 +1,20 @@
+# vscode-related:
+.venv
+.vscode
+
+# git-related:
+.gitignore
+.gitlab-ci.yml
+.git
+
+# python-related
+**/__pycache__/
+
+# secrets
+**/.env
+
+# docker-related:
+**/Dockerfile
+!Dockerfile
+docker-compose.yml
+.dockerignore

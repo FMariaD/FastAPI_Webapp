@@ -1,0 +1,13 @@
+# Python
+__pycache__
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environments
+.env
+.venv
+.envrc
+
+# SQL Database
+/postgres_data

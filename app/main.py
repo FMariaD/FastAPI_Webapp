@@ -31,6 +31,7 @@ app.add_middleware(
 
 @app.get("/", tags=["root"])
 async def read_root() -> dict:
+    """Default page"""
     return {"message": "Это проект для курса Программирование на Python (2 семестр)"}
 
 

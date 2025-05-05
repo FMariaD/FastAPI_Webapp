@@ -4,6 +4,8 @@ from sqlalchemy.sql import func
 
 
 class BaseModel(Base):
+    """Base class for all tables"""
+
     __abstract__ = True
 
     id = Column(Integer, primary_key=True, index=True)
@@ -13,6 +15,8 @@ class BaseModel(Base):
 
 
 class Book(Base):
+    """Class for books table"""
+
     __tablename__ = "books"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -23,6 +27,8 @@ class Book(Base):
 
 
 class User(Base):
+    """Class for users data table"""
+
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -33,6 +39,8 @@ class User(Base):
 
 
 class UserBook(Base):
+    """Class for user-books relation table"""
+
     __tablename__ = "user_books"
 
     id = Column(Integer, primary_key=True, index=True)

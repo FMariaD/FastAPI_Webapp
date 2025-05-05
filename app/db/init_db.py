@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 
 
 def init_db():
+    """Initializes db and fills it with default values"""
     Base.metadata.create_all(bind=engine)
 
     with Session(engine) as session:

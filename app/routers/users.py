@@ -15,6 +15,15 @@ router = APIRouter(prefix="/account", tags=["users"])
 def get_my_books(
     current_user: User = Depends(get_current_user), db: Session = Depends(get_db)
 ):
+    """Retrieve all books in the current user's collection.
+
+    Args:
+        current_user (User): Authenticated user (from JWT token).
+        db (Session): Database session.
+
+    Returns:
+        List[UserBook]: All books associated with the user.
+    """
     return db.query(DBUserBook).filter(DBUserBook.user_id == current_user.id).all()
 
 
@@ -24,6 +33,19 @@ def add_book_to_my_list(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
+    """Add a new book to the user's collection.
+
+    Args:
+        book_data (UserBookCreate): Book data including book_id, status and optional rating.
+        current_user (User): Authenticated user (from JWT token).
+        db (Session): Database session.
+
+    Returns:
+        UserBook: The newly created user-book relationship.
+
+    Raises:
+        HTTPException: 400 if book already exists in user's list.
+    """
     user_book = DBUserBook(
         user_id=current_user.id,
         book_id=book_data.book_id,
@@ -43,6 +65,20 @@ def update_book_in_my_list(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
+    """Update a book's status or rating in the user's collection.
+
+    Args:
+        book_id (int): ID of the book to update.
+        book_data (UserBookUpdate): New status/rating values.
+        current_user (User): Authenticated user (from JWT token).
+        db (Session): Database session.
+
+    Returns:
+        UserBook: Updated book record.
+
+    Raises:
+        HTTPException: 404 if book not found in user's collection.
+    """
     user_book = (
         db.query(DBUserBook)
         .filter(DBUserBook.user_id == current_user.id, DBUserBook.book_id == book_id)
@@ -67,6 +103,19 @@ def remove_book_from_my_list(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
+    """Remove a book from the user's collection.
+
+    Args:
+        book_id (int): ID of the book to remove.
+        current_user (User): Authenticated user (from JWT token).
+        db (Session): Database session.
+
+    Returns:
+        dict: Success message with confirmation.
+
+    Raises:
+        HTTPException: 404 if book not found in user's collection.
+    """
     user_book = (
         db.query(DBUserBook)
         .filter(DBUserBook.user_id == current_user.id, DBUserBook.book_id == book_id)

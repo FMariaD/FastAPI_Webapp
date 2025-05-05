@@ -1,0 +1,42 @@
+************* Module config
+app\config.py:16:0: C0301: Line too long (109/100) (line-too-long)
+app\config.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+app\config.py:15:4: C0116: Missing function or method docstring (missing-function-docstring)
+app\config.py:15:4: C0103: Attribute name "DATABASE_URL" doesn't conform to snake_case naming style (invalid-name)
+app\config.py:18:4: C0115: Missing class docstring (missing-class-docstring)
+app\config.py:18:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+************* Module main
+app\main.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+************* Module core.security
+app\core\security.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+app\core\security.py:103:8: W0707: Consider explicitly re-raising using 'except Exception as exc' and 'raise credentials_exception from exc' (raise-missing-from)
+************* Module db.init_db
+app\db\init_db.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+************* Module db.session
+app\db\session.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+************* Module models.api_models
+app\models\api_models.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+app\models\api_models.py:19:4: W0107: Unnecessary pass statement (unnecessary-pass)
+app\models\api_models.py:25:4: W0107: Unnecessary pass statement (unnecessary-pass)
+app\models\api_models.py:34:4: C0115: Missing class docstring (missing-class-docstring)
+app\models\api_models.py:34:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+app\models\api_models.py:62:4: C0115: Missing class docstring (missing-class-docstring)
+app\models\api_models.py:62:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+app\models\api_models.py:69:4: W0107: Unnecessary pass statement (unnecessary-pass)
+************* Module models.db_models
+app\models\db_models.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+app\models\db_models.py:6:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+app\models\db_models.py:17:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+app\models\db_models.py:38:64: E1102: func.now is not callable (not-callable)
+app\models\db_models.py:29:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+app\models\db_models.py:41:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+************* Module routers.auth
+app\routers\auth.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+************* Module routers.books
+app\routers\books.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+************* Module routers.users
+app\routers\users.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+
+-----------------------------------
+Your code has been rated at 8.80/10
+

@@ -15,6 +15,10 @@ class BookCreate(BookBase):
     pass
 
 
+class BookUpdate(BookBase):
+    pass
+
+
 class Book(BookBase):
     id: int
     average_rating: Optional[float] = None

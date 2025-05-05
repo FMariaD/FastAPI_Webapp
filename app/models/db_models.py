@@ -19,6 +19,7 @@ class Book(Base):
     title = Column(String, index=True)
     author = Column(String)
     year = Column(Integer)
+    description = Column(String)
 
 
 class User(Base):
@@ -37,5 +38,5 @@ class UserBook(Base):
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     book_id = Column(Integer, ForeignKey("books.id"), nullable=False)
-    status = Column(String(20), nullable=False)  # 'read' or 'planned'
+    status = Column(String(20), nullable=False)  # 'read' или 'planned'
     rating = Column(Integer)

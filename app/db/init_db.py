@@ -30,11 +30,36 @@ def init_db():
 
         # sample books
         books = [
-            Book(title="Великий Гэтсби", author="Фрэнсис Скотт Фицджеральд", year=1925),
-            Book(title="Убить пересмешника", author="Харпер Ли", year=1960),
-            Book(title="1984", author="Джордж Оруэлл", year=1949),
-            Book(title="Гордость и предубеждение", author="Джейн Остин", year=1813),
-            Book(title="Хоббит", author="Дж. Р. Р. Толкин", year=1937),
+            Book(
+                title="Великий Гэтсби",
+                author="Фрэнсис Скотт Фицджеральд",
+                year=1925,
+                description="Книга 1",
+            ),
+            Book(
+                title="Убить пересмешника",
+                author="Харпер Ли",
+                year=1960,
+                description="Книга 2",
+            ),
+            Book(
+                title="1984",
+                author="Джордж Оруэлл",
+                year=1949,
+                description="Длинное описание книги 3",
+            ),
+            Book(
+                title="Гордость и предубеждение",
+                author="Джейн Остин",
+                year=1813,
+                description="Книга 4",
+            ),
+            Book(
+                title="Хоббит",
+                author="Дж. Р. Р. Толкин",
+                year=1937,
+                description="Книга 5",
+            ),
         ]
         session.add_all(books)
         session.commit()

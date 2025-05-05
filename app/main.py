@@ -1,5 +1,8 @@
+from db.init_db import init_db
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
+init_db()
 
 app = FastAPI(
     title="Сервис для оценки и поиска книг",

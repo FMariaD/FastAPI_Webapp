@@ -1,6 +1,7 @@
 services:
-  db:
+  postgres:
     image: postgres:13
+    container_name: postgres
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
@@ -11,15 +12,15 @@ services:
       - 5432:5432
 
   web:
-    build: .
-    environment:
-      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+    container_name: web
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    env_file: ".env"
     depends_on:
-      - db
+      - postgres
     ports:
       - 8087:8087
-    volumes:
-      - .:/app
 
 volumes:
   postgres_data:

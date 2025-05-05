@@ -12,9 +12,19 @@
 
 # secrets
 **/.env
+**/.env.example
 
 # docker-related:
 **/Dockerfile
 !Dockerfile
 docker-compose.yml
 .dockerignore
+
+# tests
+tests/
+
+# readme
+README.md
+
+# Ruff settings
+settings.json

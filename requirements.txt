@@ -5,3 +5,4 @@ pydantic-settings
 sqlalchemy
 passlib
 psycopg2-binary
+jwt

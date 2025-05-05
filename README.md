@@ -14,8 +14,8 @@
 1. Создать файл `.env` и заполнить согласно шаблону в `.env.example`
 
 ```
-docker compose up
 docker compose build
+docker compose up
 ```
 
 При построении контейнеров в папке добавится _volume_:

@@ -49,6 +49,10 @@ class UserBook(UserBookBase):
         from_attributes = True
 
 
+class UserBookUpdate(UserBookBase):
+    pass
+
+
 # ///
 
 # for auth

@@ -18,9 +18,7 @@ docker compose build
 docker compose up
 ```
 
-При построении контейнеров в папке добавится _volume_:
-
--   `postgres_data`: клонированный гит-репозиторий
+Используется _named Docker volume_ - `postgres_data`
 
 ## Стандарт форматирования кода
 
